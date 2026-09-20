@@ -55,11 +55,11 @@ void pointUpdate(vector<Node>& st,int node,int tL,int tR,int idx,long long val)
 
     if(idx <= mid)
     {
-        pointUpdate(st, left_child,tL, mid, idx, value);
+        pointUpdate(st, left_child,tL, mid, idx, val);
     }
     else
     {
-        pointUpdate(st, right_child,mid + 1, tR, idx, value);
+        pointUpdate(st, right_child,mid + 1, tR, idx, val);
     }
     st[node] = mergeNode(st[left_child], st[right_child]);
 }
